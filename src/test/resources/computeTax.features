@@ -1,0 +1,13 @@
+Feature: Compute Tax
+
+  Scenario: compute Tax for SAS
+    Given an enterprise "SAS"
+    And turnover is 100.77
+    When compute tax
+    Then tax computed is 33.26
+
+  Scenario: compute Tax for entrepreneur
+    Given an enterprise "AUTO_ENTREPRENEUR"
+    And turnover is 100.66
+    When compute tax
+    Then tax computed is 25.17
